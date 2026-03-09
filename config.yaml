@@ -1,0 +1,19 @@
+# AI Gmail Guardian Configuration
+
+gmail:
+  max_results: 10
+  check_interval: 300  # seconds (5 minutes)
+  spam_label: "SPAM_AI"
+
+model:
+  path: "models/model.pkl"
+  vectorizer: "models/vectorizer.pkl"
+
+dataset:
+  url: "https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset"
+  local_path: "data/spam_dataset.csv"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/gmail_guardian.log"
